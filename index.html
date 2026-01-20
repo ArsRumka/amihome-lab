@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AmiHome — товары для дома</title>
+
+<!-- GTM или GA4 код можно вставить сюда -->
+</head>
+<body>
+
+<header class="header">
+  <h1 class="logo">AmiHome</h1>
+  <nav>
+    <a href="#catalog" class="nav-link">Каталог</a>
+    <a href="#about" class="nav-link">О нас</a>
+    <a href="#contact" class="nav-link">Контакты</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Товары для уюта и комфорта</h2>
+  <p>Современные решения для вашего дома</p>
+  <button class="btn btn-primary" id="hero-buy-btn">
+    Купить сейчас
+  </button>
+</section>
+
+<section id="catalog" class="catalog">
+  <h2>Популярные товары</h2>
+  <div class="product">
+    <h3>Ночник LED</h3>
+    <button class="btn btn-buy product-btn">Купить</button>
+  </div>
+  <div class="product">
+    <h3>Органайзер для кухни</h3>
+    <button class="btn btn-buy product-btn">Купить</button>
+  </div>
+  <div class="product special-product">
+    <h3>Эксклюзив</h3>
+    <button>Подробнее</button>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h2>Почему AmiHome?</h2>
+  <ul>
+    <li>Качество</li>
+    <li>Доставка по Беларуси</li>
+    <li>Доступные цены</li>
+  </ul>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Оставить заявку</h2>
+  <form id="contact-form" method="post">
+    <input type="text" name="name" placeholder="Ваше имя" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <button type="submit" class="btn btn-submit">Отправить</button>
+  </form>
+  <p class="form-status" id="form-status"></p>
+</section>
+
+<footer class="footer">
+  <p>© 2026 AmiHome.by</p>
+</footer>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  document.getElementById('form-status').textContent = 'Заявка отправлена (демо)';
+});
+</script>
+
+</body>
+</html>
