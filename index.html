@@ -11,10 +11,22 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-KFHTXYDEVW');
 </script>
 
+<style>
+  body {margin:0; font-family: Arial, sans-serif; background:#f5f5f5; color:#333;}
+  header {background:#1f2937; color:white; padding:15px 30px; display:flex; justify-content:space-between; align-items:center;}
+  .nav-link {color:white; margin-left:15px; text-decoration:none;}
+  .hero {background:#e5e7eb; padding:60px 20px; text-align:center;}
+  .catalog, .about, .contact {padding:40px 20px; background:white; margin:20px; border-radius:8px;}
+  .product {border:1px solid #ddd; padding:15px; margin-bottom:15px;}
+  .btn {padding:10px 20px; border:none; cursor:pointer; border-radius:4px;}
+  .btn-primary {background:#2563eb; color:white;}
+  .btn-buy {background:#16a34a; color:white;}
+  .btn-submit {background:#7c3aed; color:white;}
+  footer {text-align:center; padding:20px; background:#1f2937; color:white;}
+</style>
 </head>
 <body>
 
@@ -30,21 +42,23 @@
 <section class="hero">
   <h2>Товары для уюта и комфорта</h2>
   <p>Современные решения для вашего дома</p>
-  <button class="btn btn-primary" id="hero-buy-btn">
-    Купить сейчас
-  </button>
+  <button class="btn btn-primary" id="hero-buy-btn">Купить сейчас</button>
 </section>
 
 <section id="catalog" class="catalog">
   <h2>Популярные товары</h2>
+
   <div class="product">
     <h3>Ночник LED</h3>
     <button class="btn btn-buy product-btn">Купить</button>
   </div>
+
   <div class="product">
     <h3>Органайзер для кухни</h3>
     <button class="btn btn-buy product-btn">Купить</button>
   </div>
+
+  <!-- Кнопка без class/id — для CSS селектора -->
   <div class="product special-product">
     <h3>Эксклюзив</h3>
     <button>Подробнее</button>
@@ -75,10 +89,17 @@
 </footer>
 
 <script>
-document.getElementById('contact-form').addEventListener('submit', function(e){
-  e.preventDefault();
-  document.getElementById('form-status').textContent = 'Заявка отправлена (демо)';
-});
+  // Форма имитация submit
+  document.getElementById('contact-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('form-status').textContent = 'Заявка отправлена (демо)';
+  });
+
+  // Таймер 30 секунд для GTM
+  setTimeout(function(){
+    console.log('30 секунд прошло — таймер для GTM');
+    // Сюда GTM событие можно привязать через trigger
+  }, 30000);
 </script>
 
 </body>
